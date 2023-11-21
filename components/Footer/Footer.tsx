@@ -8,9 +8,9 @@ type Props = {
 };
 
 const Footer = ({
-  handelScrollToContact = () => {},
-  handelScrollToFeatures = () => {},
-  handelScrollToPricing = () => {},
+  handelScrollToContact = () => { },
+  handelScrollToFeatures = () => { },
+  handelScrollToPricing = () => { },
 }: Props) => {
   const router = useRouter();
 
@@ -21,7 +21,7 @@ const Footer = ({
   return (
     <footer className="footer p-10 bg-neutral text-neutral-content">
       <div>
-        <span className="text-2xl font-bold">AI Query ❤️</span>
+        <span className="text-2xl font-bold">SQL Query ❤️</span>
         <p>© {new Date().getFullYear()}</p>
       </div>
       <div>

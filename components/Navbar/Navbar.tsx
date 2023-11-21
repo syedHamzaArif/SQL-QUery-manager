@@ -11,9 +11,9 @@ type Props = {
 };
 
 const Navbar = ({
-  handelScrollToContact = () => {},
-  handelScrollToFeatures = () => {},
-  handelScrollToPricing = () => {},
+  handelScrollToContact = () => { },
+  handelScrollToFeatures = () => { },
+  handelScrollToPricing = () => { },
 }: Props) => {
   const router = useRouter();
   const { user } = useUser();
@@ -92,7 +92,7 @@ const Navbar = ({
                     </a>
                   </Link>
                 ) : (
-                  
+
                   ""
                 )}
               </li>
@@ -113,7 +113,7 @@ const Navbar = ({
               width="40px"
               height="40px"
             />{" "}
-            AI Query
+            SQL Query
           </a>
         </Link>
       </div>

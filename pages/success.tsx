@@ -61,84 +61,84 @@ const Success = () => {
   return (
 
     <>
-    <NextSeo
-    title="AI Query | Generate SQL Queries with AI in Seconds"
-    description="AI Query helps you generate complex SQL queries in seconds. Use simple English prompts to generate SQL queries. AI Query uses state of the art GPT-3 AI model to give you the best results."
-    canonical="https://aiquery.co"
-    openGraph={{
-      url: "https://aiquery.co",
-      title: "AI Query | Generate SQL Queries with AI in Seconds",
-      description:
-        "AI Query helps you generate complex SQL queries in seconds. Use simple English prompts to generate SQL queries. AI Query uses state of the art GPT-3 AI model to give you the best results.",
-      images: [{ url: "https://aiquery.co/dashboard-hero.png" }],
-      siteName: "AI Query",
-    }}
-    twitter={{
-      handle: "@HelloAIQuery",
-      cardType: "summary_large_image",
-    }}
-  />
+      <NextSeo
+        title="SQL Query Manager | Generate SQL Queries with AI in Seconds"
+        description="SQL Query Manager helps you generate complex SQL queries in seconds. Use simple English prompts to generate SQL queries. SQL Query Manager uses state of the art GPT-3 AI model to give you the best results."
+        canonical="https://aiquery.co"
+        openGraph={{
+          url: "https://aiquery.co",
+          title: "SQL Query Manager | Generate SQL Queries with AI in Seconds",
+          description:
+            "SQL Query Manager helps you generate complex SQL queries in seconds. Use simple English prompts to generate SQL queries. SQL Query Manager uses state of the art GPT-3 AI model to give you the best results.",
+          images: [{ url: "https://aiquery.co/dashboard-hero.png" }],
+          siteName: "SQL Query Manager",
+        }}
+        twitter={{
+          handle: "@HelloAIQuery",
+          cardType: "summary_large_image",
+        }}
+      />
 
 
 
 
 
-    <div className="container xl:max-w-screen-xl mx-auto py-12 px-6 text-center">
-      {error && (
-        <div className="p-2 rounded-md bg-rose-100 text-rose-500 max-w-md mx-auto">
-          <p className="text-lg">Sorry, something went wrong!</p>
-        </div>
-      )}
-      {loading && (
-        <div className="p-2 rounded-md bg-base-200 max-w-md mx-auto">
-          <p className="text-lg animate-pulse">Loading...</p>
-        </div>
-      )}
+      <div className="container xl:max-w-screen-xl mx-auto py-12 px-6 text-center">
+        {error && (
+          <div className="p-2 rounded-md bg-rose-100 text-rose-500 max-w-md mx-auto">
+            <p className="text-lg">Sorry, something went wrong!</p>
+          </div>
+        )}
+        {loading && (
+          <div className="p-2 rounded-md bg-base-200 max-w-md mx-auto">
+            <p className="text-lg animate-pulse">Loading...</p>
+          </div>
+        )}
 
-      {success && !loading && (
-        <div className="flex items-center justify-center h-screen">
-          <div>
-            <div className="flex flex-col items-center space-y-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="text-green-600 w-28 h-28"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth="1"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-              <h1 className="text-4xl font-bold">Thank You!</h1>
-              <p>Congratulations! You now have UNLIMITED access to AI Query.</p>
-              <Link href={"/dashboard"}>
-                <a className="btn btn-success">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-3 h-3 mr-2"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M7 16l-4-4m0 0l4-4m-4 4h18"
-                    />
-                  </svg>
-                  <span className="text-sm font-medium">Dashboard</span>
-                </a>
-              </Link>
+        {success && !loading && (
+          <div className="flex items-center justify-center h-screen">
+            <div>
+              <div className="flex flex-col items-center space-y-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="text-green-600 w-28 h-28"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <h1 className="text-4xl font-bold">Thank You!</h1>
+                <p>Congratulations! You now have UNLIMITED access to SQL Query Manager.</p>
+                <Link href={"/dashboard"}>
+                  <a className="btn btn-success">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-3 h-3 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M7 16l-4-4m0 0l4-4m-4 4h18"
+                      />
+                    </svg>
+                    <span className="text-sm font-medium">Dashboard</span>
+                  </a>
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
     </>
   );
 };

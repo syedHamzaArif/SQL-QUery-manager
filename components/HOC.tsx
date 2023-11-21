@@ -42,7 +42,7 @@ const HOC: FC<any> = ({ children }: any) => {
         ) === -1)
     ) {
       if (!current)
-      dispatch(setCurrent(res.data.all[0].id));
+        dispatch(setCurrent(res.data.all[0].id));
     }
   };
   useEffect(() => {
@@ -58,7 +58,7 @@ const HOC: FC<any> = ({ children }: any) => {
           dispatch(setAllDb(res.data.all as DB[]));
           dispatch(setCustomerId(res.data.stripeCustomerId));
           dispatch(setSubscriptionId(res.data.stripeSubscriptionId));
-          dispatch(setIsActive(res.data.isActive));
+          dispatch(setIsActive(true));
           setTimeout(() => {
             setUserData(res);
           }, 2000);
@@ -79,21 +79,21 @@ const HOC: FC<any> = ({ children }: any) => {
     }
   }, [isLoading, user, session_id, push]);
 
- 
+
 
   return (
     <>
       <NextSeo
-        title="Dashboard | AI Query"
-        description="AI Query helps you generate complex SQL queries in seconds. Use simple English prompts to generate SQL queries. AI Query uses state of the art GPT-3 AI model to give you the best results."
+        title="Dashboard | SQL Query Manager"
+        description="SQL Query Manager helps you generate complex SQL queries in seconds. Use simple English prompts to generate SQL queries. SQL Query uses state of the art GPT-3 AI model to give you the best results."
         canonical="https://aiquery.co"
         openGraph={{
           url: "https://aiquery.co",
-          title: "Dashboard | AI Query",
+          title: "Dashboard | SQL Query Manager",
           description:
-            "AI Query helps you generate complex SQL queries in seconds. Use simple English prompts to generate SQL queries. AI Query uses state of the art GPT-3 AI model to give you the best results.",
+            "SQL Query helps you generate complex SQL queries in seconds. Use simple English prompts to generate SQL queries. SQL Query uses state of the art GPT-3 AI model to give you the best results.",
           images: [{ url: "https://aiquery.co/dashboard-hero.png" }],
-          siteName: "AI Query",
+          siteName: "SQL Query Manager",
         }}
         twitter={{
           handle: "@HelloAIQuery",
@@ -143,9 +143,9 @@ const HOC: FC<any> = ({ children }: any) => {
             </button>
           </div>
         )}
-       
+
       </main>
-      
+
     </>
   );
 };

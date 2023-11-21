@@ -118,45 +118,6 @@ const LeftPanel = ({ user, tab, setTab }: Props) => {
       ),
     },
     {
-      name: "Help",
-      activePath: "",
-      toolTipName: "Help",
-      onClick: () => window.open("https://docs.aiquery.co/", "_blank"),
-      icon: () => (
-        <FiHelpCircle
-          className="text-[21px] dark:text-white"
-          onClick={() => window.open("https://docs.aiquery.co/", "_blank")}
-        />
-      ),
-    },
-    {
-      name: "Write Review",
-      activePath: "",
-      toolTipName: "Write Review",
-      onClick: () =>
-        window.open("https://senja.io/p/ai-query/r/UY4EgB", "_blank"),
-      icon: () => (
-        <MdOutlineRateReview
-          className="text-[21px] dark:text-white"
-          onClick={() =>
-            window.open("https://senja.io/p/ai-query/r/UY4EgB", "_blank")
-          }
-        />
-      ),
-    },
-    {
-      name: "Join Community",
-      activePath: "",
-      toolTipName: "Join Community",
-      onClick: () => window.open("/join", "_blank"),
-      icon: () => (
-        <CgCommunity
-          className="text-[21px] dark:text-white"
-          onClick={() => window.open("/join", "_blank")}
-        />
-      ),
-    },
-    {
       name: "Logout",
       toolTipName: "Logout",
       activePath: "",
@@ -179,7 +140,7 @@ const LeftPanel = ({ user, tab, setTab }: Props) => {
           <div className=" pt-8">
             <div
               className="mb-4 tooltip before:text-[10px] tooltip-bottom"
-              //data-tip="Dashboard"
+            //data-tip="Dashboard"
             >
               {leftSideBar ? (
                 <div
@@ -204,7 +165,7 @@ const LeftPanel = ({ user, tab, setTab }: Props) => {
                     />
 
                     <p className="text-[#004CF7] text-[24px] dark:text-white pl-4 font-semibold">
-                      AI Query
+                      SQL Query Manager
                     </p>
                   </div>
                 </div>
@@ -250,21 +211,19 @@ const LeftPanel = ({ user, tab, setTab }: Props) => {
                     >
                       <div className="py-2 flex items-center">
                         <span
-                          className={`material-icons ${
-                            router.pathname == t.activePath
-                              ? "text-white dark:text-white text-[21px]"
-                              : " dark:text-white text-[21px] "
-                          }`}
+                          className={`material-icons ${router.pathname == t.activePath
+                            ? "text-white dark:text-white text-[21px]"
+                            : " dark:text-white text-[21px] "
+                            }`}
                         >
                           {t.icon()}
                         </span>
 
                         <p
-                          className={`pl-4 font-semibold ${
-                            router.pathname == t.activePath
-                              ? "text-white dark:text-white"
-                              : " dark:text-white hover:text-white"
-                          }`}
+                          className={`pl-4 font-semibold ${router.pathname == t.activePath
+                            ? "text-white dark:text-white"
+                            : " dark:text-white hover:text-white"
+                            }`}
                         >
                           {t.name}
                         </p>
@@ -290,11 +249,10 @@ const LeftPanel = ({ user, tab, setTab }: Props) => {
                           data-tip={t.toolTipName}
                         >
                           <span
-                            className={`material-icons ${
-                              router.pathname == t.activePath
-                                ? "text-white dark:text-white text-[21px]"
-                                : " text-[21px] "
-                            }`}
+                            className={`material-icons ${router.pathname == t.activePath
+                              ? "text-white dark:text-white text-[21px]"
+                              : " text-[21px] "
+                              }`}
                           >
                             {t.icon()}
                           </span>
@@ -421,9 +379,8 @@ const LeftPanel = ({ user, tab, setTab }: Props) => {
               ) : (
                 <button
                   type="submit"
-                  className={`ml-2 btn btn-square bg-gradient-to-r from-[#0177e1] to-[#004cf7] border-none hover:from-[#004cf7]  hover:to-[#085da9] ${
-                    loading && "loading"
-                  }`}
+                  className={`ml-2 btn btn-square bg-gradient-to-r from-[#0177e1] to-[#004cf7] border-none hover:from-[#004cf7]  hover:to-[#085da9] ${loading && "loading"
+                    }`}
                 >
                   {!loading && (
                     <span className="material-icons text-white ">send</span>

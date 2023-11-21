@@ -48,16 +48,16 @@ const QueryPlayground = ({ isActive }: IProps) => {
   return (
     <>
       <NextSeo
-        title="Dashboard | AI Query"
-        description="AI Query helps you generate complex SQL queries in seconds. Use simple English prompts to generate SQL queries. AI Query uses state of the art GPT-3 AI model to give you the best results."
+        title="Dashboard | SQL Query Manager"
+        description="SQL Query Manager helps you generate complex SQL queries in seconds. Use simple English prompts to generate SQL queries. SQL Query Manager uses state of the art GPT-3 AI model to give you the best results."
         canonical="https://aiquery.co"
         openGraph={{
           url: "https://aiquery.co",
-          title: "Dashboard | AI Query",
+          title: "Dashboard | SQL Query Manager",
           description:
-            "AI Query helps you generate complex SQL queries in seconds. Use simple English prompts to generate SQL queries. AI Query uses state of the art GPT-3 AI model to give you the best results.",
+            "SQL Query Manager helps you generate complex SQL queries in seconds. Use simple English prompts to generate SQL queries. SQL Query Manager uses state of the art GPT-3 AI model to give you the best results.",
           images: [{ url: "https://aiquery.co/dashboard-hero.png" }],
-          siteName: "AI Query",
+          siteName: "SQL Query Manager",
         }}
         twitter={{
           handle: "@HelloAIQuery",
@@ -65,7 +65,7 @@ const QueryPlayground = ({ isActive }: IProps) => {
         }}
       />
 
-      {isActive ? (
+      {true ? (
         <>
           <div className="mb-5">
             <QueryHeader setPage={setPage} />
@@ -151,7 +151,7 @@ export const getServerSideProps = async ({
   if (!session)
     return {
       props: {
-        isActive: false,
+        isActive: true,
       },
     };
   const id = session?.user.sub;

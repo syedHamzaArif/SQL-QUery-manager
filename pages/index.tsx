@@ -94,16 +94,16 @@ const Home: NextPage = () => {
   return (
     <>
       <NextSeo
-        title="AI Query | Generate SQL Queries with AI in Seconds"
-        description="AI Query helps you generate complex SQL queries in seconds. Use simple English prompts to generate SQL queries. AI Query uses state of the art GPT-3 AI model to give you the best results."
+        title="SQL Query Manager | Generate SQL Queries with AI in Seconds"
+        description="SQL Query Manager helps you generate complex SQL queries in seconds. Use simple English prompts to generate SQL queries. SQL Query Manager uses state of the art GPT-3 AI model to give you the best results."
         canonical="https://aiquery.co"
         openGraph={{
           url: "https://aiquery.co",
-          title: "AI Query | Generate SQL Queries with AI in Seconds",
+          title: "SQL Query Manager | Generate SQL Queries with AI in Seconds",
           description:
-            "AI Query helps you generate complex SQL queries in seconds. Use simple English prompts to generate SQL queries. AI Query uses state of the art GPT-3 AI model to give you the best results.",
+            "SQL Query Manager helps you generate complex SQL queries in seconds. Use simple English prompts to generate SQL queries. SQL Query Manager uses state of the art GPT-3 AI model to give you the best results.",
           images: [{ url: "https://aiquery.co/dashboard-hero.png" }],
-          siteName: "AI Query",
+          siteName: "SQL Query Manager",
         }}
         twitter={{
           handle: "@HelloAIQuery",
@@ -135,11 +135,11 @@ const Home: NextPage = () => {
           </a>
 
           <a
-              className="btn btn-success"
-              href={"/join"}
-              target="_blank"
-              rel="noreferrer"
-              style={{ width: "250px", height: "54px" }}
+            className="btn btn-success"
+            href={"/join"}
+            target="_blank"
+            rel="noreferrer"
+            style={{ width: "250px", height: "54px" }}
           >
             Join Our Slack Community
           </a>
@@ -152,7 +152,7 @@ const Home: NextPage = () => {
               </h1>
               <p className="py-6 text-lg">
                 Use simple English and let AI do the heavy lifting for you. With
-                AI Query anyone can create efficient SQL queries, without even
+                SQL Query Manager anyone can create efficient SQL queries, without even
                 knowing a thing about it.
               </p>
               <button className="btn btn-success" onClick={handleCTAClick}>

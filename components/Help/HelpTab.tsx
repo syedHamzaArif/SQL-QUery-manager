@@ -16,7 +16,7 @@ const HelpTab = () => {
 
   return (
     <div className="py-4">
-      <h1 className="text-3xl font-bold">AI Query Help</h1>
+      <h1 className="text-3xl font-bold">SQL Query Help</h1>
       <div className="divider"></div>
 
       <h3 className="text-2xl font-semibold mb-10">

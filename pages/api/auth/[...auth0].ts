@@ -6,7 +6,7 @@ export default handleAuth({
       returnTo: "/dashboard",
       authorizationParams: {
         screen_hint: (req.query["screen_hint"] as string) || "login",
-        scope: process.env.AUTH0_SCOPE,
+        // scope: process.env.AUTH0_SCOPE,
       },
     });
   },
