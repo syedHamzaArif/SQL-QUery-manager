@@ -60,7 +60,7 @@ const AllTables = ({ tables: propTables, edit }: IProps) => {
 
   const [editDataBase, setEditDatabase] = useState(edit ? edit : false);
 
-  const handleEdit = () => {};
+  const handleEdit = () => { };
 
 
   useEffect(() => {
@@ -111,7 +111,7 @@ const AllTables = ({ tables: propTables, edit }: IProps) => {
       });
       dispatch(deleteTable(table.id));
       setAllTables(propTables.filter((t: any) => t !== table));
-    } catch (error) {}
+    } catch (error) { }
   };
   const handleCreateTable = () => {
     const id = uuidv4();
@@ -178,7 +178,7 @@ const AllTables = ({ tables: propTables, edit }: IProps) => {
           {current && (
             <div className="form-control w-auto mx-auto my-4">
               <select
-                className="select select-bordered bg-[#E8F2FF] dark:bg-[#2D2D2D] text-[#004CF7] dark:text-white border border-[#004CF7] dark:border-white w-[268px]"
+                className="select select-bordered bg-[#E8F2FF] dark:bg-[#2D2D2D] text-[#3b1d17] dark:text-white border border-[#3b1d17] dark:border-white w-[268px]"
                 value={current.id}
                 onChange={(e) => {
                   setloader(true);
@@ -206,7 +206,7 @@ const AllTables = ({ tables: propTables, edit }: IProps) => {
               <Circles
                 height="30"
                 width="30"
-                color="#004CF7"
+                color="#3b1d17"
                 ariaLabel="circles-loading"
                 wrapperStyle={{}}
                 wrapperClass=""
@@ -221,7 +221,7 @@ const AllTables = ({ tables: propTables, edit }: IProps) => {
             <>
               <div className="flex mr-4 justify-between">
                 <div>
-                  <p className="text-[#004CF7] dark:text-white text-[20px] px-4 tracking-wide font-semibold capitalize">
+                  <p className="text-[#3b1d17] dark:text-white text-[20px] px-4 tracking-wide font-semibold capitalize">
                     {current?.name}
                   </p>
                 </div>
@@ -263,7 +263,7 @@ const AllTables = ({ tables: propTables, edit }: IProps) => {
                             </p>
                           </div>
 
-                          <div className="mt-2 border border-[#004CF7] rounded-xl rounded-r-lg scrollbar-thin overflow-y-scroll   scrollbar-thumb-rounded-full h-[300px] ">
+                          <div className="mt-2 border border-[#3b1d17] rounded-xl rounded-r-lg scrollbar-thin overflow-y-scroll   scrollbar-thumb-rounded-full h-[300px] ">
                             <table className="table-compact w-full">
                               <thead className="border-b sticky top-0 table-header px-4 border-none w-[100%]">
                                 <tr className="bg-[#E8F2FF] dark:bg-[#0043A8] text-left rounded-xl ">
@@ -309,7 +309,7 @@ const AllTables = ({ tables: propTables, edit }: IProps) => {
                       <input
                         type="text"
                         placeholder="Enter Name"
-                        className="w-[268px] input focus:outline-none bg-white dark:bg-[#2D2D2D] border-[#0177E1] dark:border-white placeholder:font-normal"
+                        className="w-[268px] input focus:outline-none bg-white dark:bg-[#2D2D2D] border-[#e83864] dark:border-white placeholder:font-normal"
                         value={name}
                         // value={current?.name}
                         onChange={(e) => setName(e.target.value)}
@@ -319,7 +319,7 @@ const AllTables = ({ tables: propTables, edit }: IProps) => {
                     </div>
                     <div className="form-control w-[100%]">
                       <select
-                        className="w-[268px] select focus:outline-none bg-white dark:bg-[#2D2D2D] border-[#0177E1] dark:border-white"
+                        className="w-[268px] select focus:outline-none bg-white dark:bg-[#2D2D2D] border-[#e83864] dark:border-white"
                         // value={type}
                         value={type}
                         onChange={(e) => setType(e.target.value as DB["type"])}
@@ -341,7 +341,7 @@ const AllTables = ({ tables: propTables, edit }: IProps) => {
                       handleDeleteTable={handleDeleteTable}
                       key={table.name + index}
                       table={table}
-                      // updateTab={updateTab}
+                    // updateTab={updateTab}
                     />
                   ))}
               </div>
@@ -350,20 +350,20 @@ const AllTables = ({ tables: propTables, edit }: IProps) => {
                 <div className="w-full h-40  mt-4 rounded-lg flex flex-col items-center justify-center gap-4">
                   <p>No tables defined yet!</p>
                   <button
-                    className="text-[15px] tracking-wide savebtn rounded-lg px-4 py-2 bg-[#004CF7] dark:bg-white text-white font-normal"
+                    className="text-[15px] tracking-wide savebtn rounded-lg px-4 py-2 bg-[#3b1d17] dark:bg-white text-white font-normal"
                     onClick={handleCreateTable}
                   >
                     Create first table
                   </button>
                 </div>
               ) : (
-                <div className="mx-4 my-4 w-[183px] h-[116px] rounded-lg flex justify-center items-center border-dashed border-2 border-[#004CF7] dark:border-white bg-[#E8F2FF] dark:bg-[#2D2D2D]">
+                <div className="mx-4 my-4 w-[183px] h-[116px] rounded-lg flex justify-center items-center border-dashed border-2 border-[#3b1d17] dark:border-white bg-[#E8F2FF] dark:bg-[#2D2D2D]">
                   <button
                     className="cursor-pointer"
                     onClick={handleCreateTable}
                     disabled={inEdit}
                   >
-                    <span className="material-icons mr-1 text-[#004CF7] dark:text-white relative top-1">
+                    <span className="material-icons mr-1 text-[#3b1d17] dark:text-white relative top-1">
                       add_circle
                     </span>{" "}
                     Add Table
@@ -373,7 +373,7 @@ const AllTables = ({ tables: propTables, edit }: IProps) => {
 
               <div className="mt-10 px-4">
                 <button
-                  className="text-[15px] tracking-wide rounded-lg px-4 py-2 border border-[#004CF7] dark:border-white dark:text-white mr-3 font-normal hover:bg-red-700 hover:text-white hover:border-red-700 uppercase"
+                  className="text-[15px] tracking-wide rounded-lg px-4 py-2 border border-[#3b1d17] dark:border-white dark:text-white mr-3 font-normal hover:bg-red-700 hover:text-white hover:border-red-700 uppercase"
                   onClick={() => {
                     setEditDatabase(false);
                   }}
@@ -382,7 +382,7 @@ const AllTables = ({ tables: propTables, edit }: IProps) => {
                 </button>
                 <button
                   type="submit"
-                  className="text-[15px] tracking-wide bg-gradient-to-r from-[#0177e1] to-[#004cf7] hover:from-[#004cf7]  hover:to-[#085da9] rounded-lg px-4 py-2  dark:bg-white text-white font-normal uppercase"
+                  className="text-[15px] tracking-wide bg-gradient-to-r from-[#e83864] to-[#3b1d17] hover:from-[#3b1d17]  hover:to-[#a8072f] rounded-lg px-4 py-2  dark:bg-white text-white font-normal uppercase"
                   onClick={handleUpdateDBClick}
                 >
                   Save
@@ -394,7 +394,7 @@ const AllTables = ({ tables: propTables, edit }: IProps) => {
         {!editDataBase && (
           <div className="px-4 ">
             <button
-              className="uppercase cursor-pointer border border-[#004CF7]  text-white dark:border-white] rounded-lg px-4 py-2 bg-gradient-to-r from-[#0177e1] to-[#004cf7] hover:from-[#004cf7]  hover:to-[#085da9]"
+              className="uppercase cursor-pointer border border-[#3b1d17]  text-white dark:border-white] rounded-lg px-4 py-2 bg-gradient-to-r from-[#e83864] to-[#3b1d17] hover:from-[#3b1d17]  hover:to-[#a8072f]"
               onClick={() => router.push("/dashboard/databases")}
             >
               Back

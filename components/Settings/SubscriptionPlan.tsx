@@ -42,7 +42,7 @@ const SubscriptionPlan = ({ isActive }: IProps) => {
       <p className="text-[#2D2D2D] text-[25px] font-[500] dark:text-white">
         Subscription Plan
       </p>
-      <div className="border-t border-t-[#004CF7] dark:border-t-white  mt-2"></div>
+      <div className="border-t border-t-[#3b1d17] dark:border-t-white  mt-2"></div>
       {isActive ? (
         <div>
           {isLoading ? (
@@ -60,7 +60,7 @@ const SubscriptionPlan = ({ isActive }: IProps) => {
           ) : (
             // <PlanCard data={myPlans} />
             <>
-            {myPlans.planName === 'Pro Monthly' ? MonthlyPlan.map((p: any, i: any) => (
+              {myPlans.planName === 'Pro Monthly' ? MonthlyPlan.map((p: any, i: any) => (
                 <PlanCard
                   priceId={p.priceId}
                   key={i}

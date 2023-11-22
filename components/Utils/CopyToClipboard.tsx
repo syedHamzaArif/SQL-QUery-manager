@@ -33,7 +33,7 @@ const CopyToClipboardButton = ({
 
       <div>
         {copied ? (
-          <span className="badge badge-[#0177E1] ml-2">Copied.</span>
+          <span className="badge badge-[#e83864] ml-2">Copied.</span>
         ) : null}
       </div>
     </div>

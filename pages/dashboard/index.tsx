@@ -76,7 +76,7 @@ const QueryPlayground = ({ isActive }: IProps) => {
               <div className=" px-4">
                 <div className="icon with text history flex justify-between py-2 items-center ">
                   <select
-                    className="select select-bordered bg-[#E8F2FF] dark:bg-[#2D2D2D] text-[#004CF7] dark:text-white border border-[#004CF7] dark:border-white"
+                    className="select select-bordered bg-[#E8F2FF] dark:bg-[#2D2D2D] text-[#3b1d17 ] dark:text-white border border-[#3b1d17 ] dark:border-white"
                     value={intent}
                     onChange={handleSelectChange}
                     required
@@ -90,7 +90,7 @@ const QueryPlayground = ({ isActive }: IProps) => {
                   <div className="flex items-center">
                     <AiOutlineHistory className="mr-1 -scale-x-100" />
                     <p
-                      className="text-[#004CF7] dark:text-white text-[15px] font-semibold cursor-pointer"
+                      className="text-[#3b1d17 ] dark:text-white text-[15px] font-semibold cursor-pointer"
                       onClick={handleHistory}
                     >
                       History
@@ -120,7 +120,7 @@ const QueryPlayground = ({ isActive }: IProps) => {
               {showQueries && queriesData.length >= 2 && (
                 <div className="relative">
                   <button
-                    className="absolute right-5 bottom-5 bg-gradient-to-r from-[#0177e1] to-[#004cf7] border-none hover:from-[#004cf7]  hover:to-[#085da9] p-3 rounded-full text-white font-bold text-[20px]"
+                    className="absolute right-5 bottom-5 bg-gradient-to-r from-[#e83864] to-[#3b1d17 ] border-none hover:from-[#3b1d17 ]  hover:to-[#a8072f] p-3 rounded-full text-white font-bold text-[20px]"
                     type="button"
                     onClick={() => scrollToTop()}
                   >

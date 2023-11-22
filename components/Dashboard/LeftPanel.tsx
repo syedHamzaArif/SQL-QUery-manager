@@ -83,13 +83,13 @@ const LeftPanel = ({ user, tab, setTab }: Props) => {
         <AiOutlineConsoleSql className="text-[21px] dark:text-white" />
       ),
     },
-    {
-      name: "Databases",
-      toolTipName: "Databases",
-      activePath: "/dashboard/databases",
-      onClick: () => router.push("/dashboard/databases"),
-      icon: () => <AiOutlineDatabase className="text-[21px] dark:text-white" />,
-    },
+    // {
+    //   name: "Databases",
+    //   toolTipName: "Databases",
+    //   activePath: "/dashboard/databases",
+    //   onClick: () => router.push("/dashboard/databases"),
+    //   icon: () => <AiOutlineDatabase className="text-[21px] dark:text-white" />,
+    // },
   ];
 
   const bottomNavBar = [
@@ -164,7 +164,7 @@ const LeftPanel = ({ user, tab, setTab }: Props) => {
                       width={50}
                     />
 
-                    <p className="text-[#004CF7] text-[24px] dark:text-white pl-4 font-semibold">
+                    <p className="text-[#3b1d17] text-[24px] dark:text-white pl-4 font-semibold">
                       SQL Query Manager
                     </p>
                   </div>
@@ -199,7 +199,7 @@ const LeftPanel = ({ user, tab, setTab }: Props) => {
                 leftSideBar ? (
                   <div
                     key={i}
-                    className="hoverBtn text-[#004CF7] hover:!text-white"
+                    className="hoverBtn text-[#3b1d17] hover:!text-white"
                   >
                     <div
                       onClick={() => t.onClick()}
@@ -233,7 +233,7 @@ const LeftPanel = ({ user, tab, setTab }: Props) => {
                 ) : (
                   <div
                     key={i}
-                    className="hoverBtn text-[#004CF7] hover:!text-white"
+                    className="hoverBtn text-[#3b1d17] hover:!text-white"
                   >
                     <div key={i}>
                       <div
@@ -379,7 +379,7 @@ const LeftPanel = ({ user, tab, setTab }: Props) => {
               ) : (
                 <button
                   type="submit"
-                  className={`ml-2 btn btn-square bg-gradient-to-r from-[#0177e1] to-[#004cf7] border-none hover:from-[#004cf7]  hover:to-[#085da9] ${loading && "loading"
+                  className={`ml-2 btn btn-square bg-gradient-to-r from-[#e83864] to-[#3b1d17] border-none hover:from-[#3b1d17]  hover:to-[#a8072f] ${loading && "loading"
                     }`}
                 >
                   {!loading && (

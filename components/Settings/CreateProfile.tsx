@@ -25,15 +25,15 @@ const CreateProfile = () => {
   //     ErrorToast(error?.response?.data?.message);
   //   }
   // };
-  
+
   return (
     <div className="flex flex-col justify-between ">
       <div>
         <p className="text-[#2D2D2D] text-[25px] font-[500] dark:text-white">
           Profile
         </p>
-        <div className="border-t border-t-[#004CF7] dark:border-t-white  mt-2"></div>
-        
+        <div className="border-t border-t-[#3b1d17] dark:border-t-white  mt-2"></div>
+
         <div className="w-[50%] flex flex-col gap-4 mt-5">
           <div className="w-[50%]">
             <p className="text-[#7E7E7E] dark:text-white font-[400] text-[16px] mb-1">
@@ -63,7 +63,7 @@ const CreateProfile = () => {
         </div>
       </div>
       {/* <div>
-        <button onClick={handleUpdateProfile} className="w-[114px] h-[40px] rounded bg-gradient-to-r from-[#0177e1] to-[#004cf7] hover:from-[#004cf7]  hover:to-[#085da9] text-white text-[14px] font-[400]">
+        <button onClick={handleUpdateProfile} className="w-[114px] h-[40px] rounded bg-gradient-to-r from-[#e83864] to-[#3b1d17] hover:from-[#3b1d17]  hover:to-[#a8072f] text-white text-[14px] font-[400]">
           Update Profile
         </button>
       </div> */}

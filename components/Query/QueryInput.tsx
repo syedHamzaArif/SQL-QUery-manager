@@ -10,11 +10,11 @@ import { ErrorToast } from "@components/Toasts";
 
 interface IProps {
   intent: string;
-  setCurrentQuery:Dispatch<SetStateAction<boolean>>;
-  setShowQueries:Dispatch<SetStateAction<boolean>>;
+  setCurrentQuery: Dispatch<SetStateAction<boolean>>;
+  setShowQueries: Dispatch<SetStateAction<boolean>>;
 }
 
-const QueryInput = ({ intent, setCurrentQuery,setShowQueries }: IProps) => {
+const QueryInput = ({ intent, setCurrentQuery, setShowQueries }: IProps) => {
   const dispatch = useDispatch();
   const { user } = useUser();
   const { current, tables } = useSelector(
@@ -76,7 +76,7 @@ const QueryInput = ({ intent, setCurrentQuery,setShowQueries }: IProps) => {
           <span className="flex gap-4">
             <textarea
               placeholder="Query prompt..."
-              className="textarea-xm textarea focus:outline-none textarea-bordered bg-white border-[2px] border-textPrimary  ml-2 p-4 rounded-xl border-[#004CF7] text-[#7E7E7E] dark:bg-[#2D2D2D] dark:text-[#E2E2E2] dark:border-white w-full"
+              className="textarea-xm textarea focus:outline-none textarea-bordered bg-white border-[2px] border-textPrimary  ml-2 p-4 rounded-xl border-[#3b1d17 ] text-[#7E7E7E] dark:bg-[#2D2D2D] dark:text-[#E2E2E2] dark:border-white w-full"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onFocus={(e) => setIsFocused(true)}
@@ -86,9 +86,8 @@ const QueryInput = ({ intent, setCurrentQuery,setShowQueries }: IProps) => {
 
             <button
               type="submit"
-              className={`btn btn-square bg-gradient-to-r from-[#0177e1] to-[#004cf7] border-none hover:from-[#004cf7]  hover:to-[#085da9] ${
-                loading && "loading"
-              }`}
+              className={`btn btn-square bg-gradient-to-r from-[#e83864 ] to-[#3b1d17 ] border-none hover:from-[#3b1d17 ]  hover:to-[#a8072f] ${loading && "loading"
+                }`}
             >
               {!loading && (
                 <span className="material-icons text-white">send</span>

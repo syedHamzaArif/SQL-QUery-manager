@@ -100,7 +100,7 @@ const HOC: FC<any> = ({ children }: any) => {
           cardType: "summary_large_image",
         }}
       />
-      <main className="m-auto bg-[#F6F6F6] text-[#004CF7]  dark:bg-[#1c1c1c] dark:text-[#FFFFFF]">
+      <main className="m-auto bg-[#F6F6F6] text-[#3b1d17]  dark:bg-[#1c1c1c] dark:text-[#FFFFFF]">
         {/* <main className="m-auto bg-[#CFCFCF]"> */}
 
         {!user && !isLoading && <></>}

@@ -53,7 +53,7 @@ const TableRows = ({
                   onClick={() => handleRowDelete(i)}
                   disabled={true}
                 >
-                  <RiDeleteBin6Line className="text-[17px] text-[#004CF7] dark:text-white" />
+                  <RiDeleteBin6Line className="text-[17px] text-[#3b1d17] dark:text-white" />
                 </button>
               </td>
             )}
@@ -64,7 +64,7 @@ const TableRows = ({
               <label>
                 <input
                   type="text"
-                  className="placeholder:font-light focus:outline-none border bg-white p-2 rounded-xl border-[#004CF7] text-[#7E7E7E] dark:bg-[#2D2D2D] dark:text-[#E2E2E2] dark:border-white w-full "
+                  className="placeholder:font-light focus:outline-none border bg-white p-2 rounded-xl border-[#3b1d17] text-[#7E7E7E] dark:bg-[#2D2D2D] dark:text-[#E2E2E2] dark:border-white w-full "
                   value={col.name}
                   onChange={(e) => handleRowEdit(e, i, "name")}
                   disabled={!inEdit}
@@ -78,7 +78,7 @@ const TableRows = ({
               <label>
                 <input
                   type="text"
-                  className="focus:outline-none border bg-white p-2 rounded-xl border-[#004CF7] text-[#7E7E7E] dark:bg-[#2D2D2D] dark:text-[#E2E2E2] dark:border-white w-full placeholder:font-light"
+                  className="focus:outline-none border bg-white p-2 rounded-xl border-[#3b1d17] text-[#7E7E7E] dark:bg-[#2D2D2D] dark:text-[#E2E2E2] dark:border-white w-full placeholder:font-light"
                   value={col.type}
                   onChange={(e) => handleRowEdit(e, i, "type")}
                   disabled={!inEdit}
@@ -92,7 +92,7 @@ const TableRows = ({
                 className="cursor-pointer"
                 onClick={() => handleRowDelete(i)}
               >
-                <RiDeleteBin6Line className="text-[17px] text-[#004CF7] dark:text-white" />
+                <RiDeleteBin6Line className="text-[17px] text-[#3b1d17] dark:text-white" />
               </button>
             </td>
           </tr>
@@ -214,7 +214,7 @@ const Table = ({ table, newTable }: Props) => {
   };
 
   return (
-    <div className="rounded-xl border-2 border-[#004CF7] text-[#7E7E7E]  dark:border-white p-3 bg-[#E8F2FFA1] dark:bg-[#2D2D2D]">
+    <div className="rounded-xl border-2 border-[#3b1d17] text-[#7E7E7E]  dark:border-white p-3 bg-[#E8F2FFA1] dark:bg-[#2D2D2D]">
       <div className="w-full -top-1 mb-2 mt-2 flex justify-end">
         {table.inEdit ? (
           <>
@@ -232,7 +232,7 @@ const Table = ({ table, newTable }: Props) => {
             <button
               className={`cursor-pointer`}
               onClick={handleToggleCloseEdit}
-              // disabled={table.name.length === 0}
+            // disabled={table.name.length === 0}
             >
               <span className="material-icons text-[#D81616] text-[17px]">
                 close
@@ -246,7 +246,7 @@ const Table = ({ table, newTable }: Props) => {
               onClick={handleToggleEditTable}
               disabled={current?.id === "demo-db"}
             >
-              <FiEdit className="text-[17px] text-[#004CF7] dark:text-white mr-2" />
+              <FiEdit className="text-[17px] text-[#3b1d17] dark:text-white mr-2" />
             </button>
 
             {current?.id === "demo-db" ? (
@@ -254,7 +254,7 @@ const Table = ({ table, newTable }: Props) => {
                 className="cursor-pointer"
                 disabled={current?.id === "demo-db"}
               >
-                <RiDeleteBin6Line className="text-[17px] text-[#004CF7] dark:text-white" />
+                <RiDeleteBin6Line className="text-[17px] text-[#3b1d17] dark:text-white" />
               </button>
             ) : (
               <label
@@ -262,7 +262,7 @@ const Table = ({ table, newTable }: Props) => {
                 className={`cursor-pointer   ${isDeleting && "loading"}`}
               >
                 {!isDeleting && (
-                  <RiDeleteBin6Line className="text-[17px] text-[#004CF7] dark:text-white" />
+                  <RiDeleteBin6Line className="text-[17px] text-[#3b1d17] dark:text-white" />
                 )}
               </label>
             )}
@@ -273,7 +273,7 @@ const Table = ({ table, newTable }: Props) => {
       <div className="w-full mb-2">
         <input
           type="text"
-          className="mb-3 placeholder:font-light focus:outline-none border bg-white p-4 rounded-xl border-[#004CF7] text-[#7E7E7E] dark:bg-[#2D2D2D] dark:text-[#E2E2E2] dark:border-white w-full "
+          className="mb-3 placeholder:font-light focus:outline-none border bg-white p-4 rounded-xl border-[#3b1d17] text-[#7E7E7E] dark:bg-[#2D2D2D] dark:text-[#E2E2E2] dark:border-white w-full "
           value={name}
           onChange={(e) => setName(e.target.value)}
           disabled={!table.inEdit}
@@ -283,7 +283,7 @@ const Table = ({ table, newTable }: Props) => {
         />
       </div>
 
-      <div className="border border-[#004CF7] rounded-xl rounded-r-xl dark:border-white overflow-y-scroll scrollbar-thin  scrollbar-track-transparent scrollbar-thumb-rounded-full h-[200px]">
+      <div className="border border-[#3b1d17] rounded-xl rounded-r-xl dark:border-white overflow-y-scroll scrollbar-thin  scrollbar-track-transparent scrollbar-thumb-rounded-full h-[200px]">
         <div className="table-wrp block max-h-96">
           <table className="table-compact w-full ">
             <thead className="border-b sticky top-0 table-header text-white px-4 border-none w-[100%]">
@@ -313,10 +313,10 @@ const Table = ({ table, newTable }: Props) => {
 
       {table.inEdit && (
         <button
-          className="mt-4 w-full text-[#004CF7] dark:text-white text-left"
+          className="mt-4 w-full text-[#3b1d17] dark:text-white text-left"
           onClick={handleAddCols}
         >
-          <span className="material-icons mr-1 text-[#004CF7] dark:text-white relative top-1">
+          <span className="material-icons mr-1 text-[#3b1d17] dark:text-white relative top-1">
             add_circle
           </span>
           Add Column
@@ -336,15 +336,15 @@ const Table = ({ table, newTable }: Props) => {
           >
             <span className="material-icons">close</span>
           </label>
-          <h3 className="font-bold text-lg text-[#004cf7] dark:text-white">
+          <h3 className="font-bold text-lg text-[#3b1d17] dark:text-white">
             Are you sure you want to delete {table.name}?
           </h3>
-          <p className="py-2 flex text-[16px] text-[#004cf7] dark:text-white">You won&apos;t be able to revert this!</p>
+          <p className="py-2 flex text-[16px] text-[#3b1d17] dark:text-white">You won&apos;t be able to revert this!</p>
 
-          <p className="py-4 text-[16px] text-[#004cf7] dark:text-white">
+          <p className="py-4 text-[16px] text-[#3b1d17] dark:text-white">
             Type <b>{table?.name}</b> below to confirm deletion
           </p>
-          
+
           <div className="modal-action w-full">
             <input
               type="text"
@@ -353,7 +353,7 @@ const Table = ({ table, newTable }: Props) => {
               value={deleteInput}
             />
             <button
-              className="btn bg-gradient-to-r from-[#0177e1] to-[#004cf7] hover:from-[#004cf7]  hover:to-[#085da9] border-none cursor-pointer text-white "
+              className="btn bg-gradient-to-r from-[#e83864] to-[#3b1d17] hover:from-[#3b1d17]  hover:to-[#a8072f] border-none cursor-pointer text-white "
               onClick={handleDeleteTable}
               disabled={deleteInput !== table.name}
             >

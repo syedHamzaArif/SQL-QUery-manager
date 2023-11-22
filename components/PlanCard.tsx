@@ -46,7 +46,7 @@ const PlanCard: React.FunctionComponent<IPlanCardProps> = ({
       router.push(res.data as Url);
     };
 
-  
+
 
   const redirectToCheckout = async (price: string) => {
     try {
@@ -74,7 +74,7 @@ const PlanCard: React.FunctionComponent<IPlanCardProps> = ({
         className={`my-10 flex flex-col justify-between p-6 mx-auto max-w-md text-center bg-transparent rounded-[20px] xl:p-8 ${"border-[1px] border-[#007CDE]"}`}
       >
         {isAnnual && (
-          <button className="relative -top-12 btn bg-gradient-to-r from-[#0177e1] to-[#004cf7] border-none rounded-[20px] m-auto text-white font-roboto font-[500]">
+          <button className="relative -top-12 btn bg-gradient-to-r from-[#e83864] to-[#3b1d17] border-none rounded-[20px] m-auto text-white font-roboto font-[500]">
             Most Popular
           </button>
         )}
@@ -110,7 +110,7 @@ const PlanCard: React.FunctionComponent<IPlanCardProps> = ({
                   <span
                     className={
                       firstWord === "Faster" || firstWord === "Priority"
-                        ? "text-[#004CF7] dark:text-white"
+                        ? "text-[#3b1d17] dark:text-white"
                         : "text-[#7E7E7E] dark:text-white"
                     }
                   >
@@ -127,7 +127,7 @@ const PlanCard: React.FunctionComponent<IPlanCardProps> = ({
           <form onSubmit={handleManageSubscription}>
             <button
               className=" uppercase
-               btn bg-gradient-to-r from-[#0177e1] to-[#004cf7] hover:from-[#004cf7]  hover:to-[#085da9] border-none rounded-[20px] w-[70%] m-auto text-white font-roboto font-[600]"
+               btn bg-gradient-to-r from-[#e83864] to-[#3b1d17] hover:from-[#3b1d17]  hover:to-[#a8072f] border-none rounded-[20px] w-[70%] m-auto text-white font-roboto font-[600]"
               type="submit"
             >
               Manage billing
@@ -137,7 +137,7 @@ const PlanCard: React.FunctionComponent<IPlanCardProps> = ({
           <button
             onClick={() => redirectToCheckout(priceId)}
             className=" uppercase
-          btn bg-gradient-to-r from-[#0177e1] to-[#004cf7] hover:from-[#004cf7]  hover:to-[#085da9] border-none rounded-[20px] w-[70%] m-auto text-white font-roboto font-[600]"
+          btn bg-gradient-to-r from-[#e83864] to-[#3b1d17] hover:from-[#3b1d17]  hover:to-[#a8072f] border-none rounded-[20px] w-[70%] m-auto text-white font-roboto font-[600]"
             type="submit"
           >
             Upgrade to Pro

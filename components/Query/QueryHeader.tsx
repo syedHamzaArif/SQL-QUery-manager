@@ -56,11 +56,11 @@ const QueryHeader = ({ setPage }: Iprops) => {
           {current && (
             <div className="form-control w-auto mx-auto my-4">
               <select
-                className="select select-bordered bg-[#E8F2FF] dark:bg-[#2D2D2D] text-[#004CF7] dark:text-white border border-[#004CF7] dark:border-white w-[268px]"
+                className="select select-bordered bg-[#E8F2FF] dark:bg-[#2D2D2D] text-[#3b1d17] dark:text-white border border-[#3b1d17] dark:border-white w-[268px]"
                 value={current.id}
                 // value={selectedValue}
                 onChange={(e) => {
-                  
+
                   dispatch(setCurrent(e.target.value));
                   dispatch(resetTables());
                   setPage(0);

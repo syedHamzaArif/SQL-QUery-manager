@@ -32,18 +32,18 @@ const TableList = ({
       ))}
 
       {/* {true ? ( */}
-        <div className="w-[183px] h-[116px] rounded-lg flex justify-center items-center border-dashed border-2 border-[#004CF7] dark:border-white bg-[#E8F2FF] dark:bg-[#2D2D2D] ">
-          <button
-            className="cursor-pointer"
-            onClick={handleCreateTable}
-            disabled={isInEdit}
-          >
-            <span className="material-icons mr-1 text-[#004CF7] dark:text-white relative top-1">
-              add_circle
-            </span>{" "}
-            Add Table
-          </button>
-        </div>
+      <div className="w-[183px] h-[116px] rounded-lg flex justify-center items-center border-dashed border-2 border-[#3b1d17] dark:border-white bg-[#E8F2FF] dark:bg-[#2D2D2D] ">
+        <button
+          className="cursor-pointer"
+          onClick={handleCreateTable}
+          disabled={isInEdit}
+        >
+          <span className="material-icons mr-1 text-[#3b1d17] dark:text-white relative top-1">
+            add_circle
+          </span>{" "}
+          Add Table
+        </button>
+      </div>
       {/* // ) : null} */}
 
       {/* {isMore && (

@@ -75,7 +75,7 @@ const AllDatabases = () => {
             <div className="grid xl:grid-cols-4 lg:grid-cols-3 gap-3">
               {sort().map((db, i) => (
                 <React.Fragment key={db.name + i}>
-                  <div className="border border-[#0177E1] dark:border-white w-[100%] h-[100%] rounded-xl py-4 px-3 flex justify-between">
+                  <div className="border border-[#e83864] dark:border-white w-[100%] h-[100%] rounded-xl py-4 px-3 flex justify-between">
                     <div
                       className="cursor-pointer"
                       onClick={() => {
@@ -140,7 +140,7 @@ const AllDatabases = () => {
             <Circles
               height="30"
               width="30"
-              color="#004CF7"
+              color="#3b1d17"
               ariaLabel="circles-loading"
               wrapperStyle={{}}
               wrapperClass=""
@@ -178,7 +178,7 @@ const AllDatabases = () => {
               autoFocus
             />
             <button
-              className="btn bg-gradient-to-r from-[#0177e1] to-[#004cf7] hover:from-[#004cf7]  hover:to-[#085da9] border-none cursor-pointer text-white"
+              className="btn bg-gradient-to-r from-[#e83864] to-[#3b1d17] hover:from-[#3b1d17]  hover:to-[#a8072f] border-none cursor-pointer text-white"
               onClick={handleDeleteDatabase}
               disabled={deleteInput !== toDelete?.name}
             >

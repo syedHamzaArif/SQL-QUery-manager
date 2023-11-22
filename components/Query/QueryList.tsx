@@ -64,18 +64,18 @@ const QueryList = ({ showQueries, currentQuery }: Iprops) => {
     const doc =
       lastKey !== null
         ? query(
-            queryRef,
-            where("dbid", "==", current?.id),
-            orderBy("createdAt", "desc"),
-            startAfter(lastKey),
-            limit(3)
-          )
+          queryRef,
+          where("dbid", "==", current?.id),
+          orderBy("createdAt", "desc"),
+          startAfter(lastKey),
+          limit(3)
+        )
         : query(
-            queryRef,
-            where("dbid", "==", current?.id),
-            orderBy("createdAt", "desc"),
-            limit(6)
-          );
+          queryRef,
+          where("dbid", "==", current?.id),
+          orderBy("createdAt", "desc"),
+          limit(6)
+        );
     const response = await getDocs(doc);
 
     const queries = response.docs.map((qry) => ({ ...qry.data(), id: qry.id }));
@@ -117,7 +117,7 @@ const QueryList = ({ showQueries, currentQuery }: Iprops) => {
     getQueries(true);
   }, [current?.id]);
 
- 
+
   return (
     <Fragment>
       <div className="w-full h-full">
@@ -131,7 +131,7 @@ const QueryList = ({ showQueries, currentQuery }: Iprops) => {
             return <QueryItem key={i} query={q} />;
           })}
 
-      
+
 
         <div className="top-to-btm"></div>
 
@@ -144,9 +144,8 @@ const QueryList = ({ showQueries, currentQuery }: Iprops) => {
         {queriesData && queriesData.length >= 3 && showQueries && !empty && (
           <div className="mt-2 flex justify-center">
             <button
-              className={`w-[150px] btn btn-square bg-gradient-to-r from-[#0177e1] to-[#004cf7] border-none hover:from-[#004cf7]  hover:to-[#085da9] dark:text-white ${
-                loading ? "loading" : ""
-              }`}
+              className={`w-[150px] btn btn-square bg-gradient-to-r from-[#e83864] to-[#3b1d17] border-none hover:from-[#3b1d17]  hover:to-[#a8072f] dark:text-white ${loading ? "loading" : ""
+                }`}
               onClick={fetchMorePosts}
             >
               {loading ? "" : "Show More"}

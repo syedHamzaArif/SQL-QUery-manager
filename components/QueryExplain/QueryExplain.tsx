@@ -154,18 +154,18 @@ const QueryExplain = () => {
       const doc =
         lastKey !== null
           ? query(
-              queryRef,
-              // where("id", "==", current?.id),
-              orderBy("createdAt", "desc"),
-              startAfter(lastKey),
-              limit(3)
-            )
+            queryRef,
+            // where("id", "==", current?.id),
+            orderBy("createdAt", "desc"),
+            startAfter(lastKey),
+            limit(3)
+          )
           : query(
-              queryRef,
-              // where("id"),
-              orderBy("createdAt", "desc"),
-              limit(6)
-            );
+            queryRef,
+            // where("id"),
+            orderBy("createdAt", "desc"),
+            limit(6)
+          );
 
       const response = await getDocs(doc);
 
@@ -181,7 +181,7 @@ const QueryExplain = () => {
         setEmpty(false);
         updateState(response);
       } else setEmpty(true);
-    } catch (error) {}
+    } catch (error) { }
   };
 
   const getExplanations = async () => {
@@ -216,14 +216,14 @@ const QueryExplain = () => {
         </div>
       </div>
 
-      
+
 
       <div className=" w-[98%] h-[89vh] pb-10 bg-white dark:bg-[#2D2D2D] mt-5 rounded-lg px-5 py-4 ">
         <div className="flex items-center justify-end  my-4">
           <div className="icon with text history flex items-center pr-[22px]">
             <AiOutlineHistory className="mr-2" />
             <p
-              className="text-[#004CF7] dark:text-white text-[15px] font-semibold cursor-pointer"
+              className="text-[#3b1d17] dark:text-white text-[15px] font-semibold cursor-pointer"
               onClick={getExplanations}
             >
               History
@@ -238,7 +238,7 @@ const QueryExplain = () => {
           <form className="form-control" onSubmit={handleSubmit}>
             <div className="flex gap-4">
               <textarea
-                className="textarea-xm textarea focus:outline-none textarea-bordered bg-white border-[2px] border-textPrimary  ml-2 p-4 rounded-xl border-[#004CF7] text-[#7E7E7E] dark:bg-[#2D2D2D] dark:text-[#E2E2E2] dark:border-white w-full"
+                className="textarea-xm textarea focus:outline-none textarea-bordered bg-white border-[2px] border-textPrimary  ml-2 p-4 rounded-xl border-[#3b1d17] text-[#7E7E7E] dark:bg-[#2D2D2D] dark:text-[#E2E2E2] dark:border-white w-full"
                 placeholder="Paste some SQL to generate explanation"
                 value={code}
                 onChange={(e) => setCode(e.target.value)}
@@ -246,9 +246,8 @@ const QueryExplain = () => {
               />
 
               <button
-                className={`btn btn-square  bg-gradient-to-r from-[#0177e1] to-[#004cf7] border-none hover:from-[#004cf7]  hover:to-[#085da9] dark:text-white ${
-                  loading && "loading"
-                }`}
+                className={`btn btn-square  bg-gradient-to-r from-[#e83864] to-[#3b1d17] border-none hover:from-[#3b1d17]  hover:to-[#a8072f] dark:text-white ${loading && "loading"
+                  }`}
                 type="submit"
               >
                 {!loading && (
@@ -295,9 +294,8 @@ const QueryExplain = () => {
                               Is the output correct?
                             </p>
                             <span
-                              className={` text-[#36D36A] text-[8px] cursor-pointer ${
-                                loadingFeedback.correct && "loading"
-                              }`}
+                              className={` text-[#36D36A] text-[8px] cursor-pointer ${loadingFeedback.correct && "loading"
+                                }`}
                               onClick={() =>
                                 handleFeedbackSubmit(true, q.id, index)
                               }
@@ -307,9 +305,8 @@ const QueryExplain = () => {
                               )}
                             </span>
                             <span
-                              className={` cursor-pointer text-[#D81616] text-[8px] ${
-                                loadingFeedback.wrong && "loading"
-                              }`}
+                              className={` cursor-pointer text-[#D81616] text-[8px] ${loadingFeedback.wrong && "loading"
+                                }`}
                               onClick={() =>
                                 handleFeedbackSubmit(false, q.id, index)
                               }
@@ -363,9 +360,8 @@ const QueryExplain = () => {
                               Is the output correct?
                             </p>
                             <span
-                              className={` text-[#36D36A] text-[8px] cursor-pointer ${
-                                loadingFeedback.correct && "loading"
-                              }`}
+                              className={` text-[#36D36A] text-[8px] cursor-pointer ${loadingFeedback.correct && "loading"
+                                }`}
                               onClick={() => handleFeedbackSubmit(true, id)}
                             >
                               {!loadingFeedback.correct && (
@@ -373,9 +369,8 @@ const QueryExplain = () => {
                               )}
                             </span>
                             <span
-                              className={` text-[#D81616] text-[8px] cursor-pointer ${
-                                loadingFeedback.wrong && "loading"
-                              }`}
+                              className={` text-[#D81616] text-[8px] cursor-pointer ${loadingFeedback.wrong && "loading"
+                                }`}
                               onClick={() => handleFeedbackSubmit(false, id)}
                             >
                               {!loadingFeedback.wrong && (
@@ -402,9 +397,8 @@ const QueryExplain = () => {
           showExplanation && (
             <div className="mt-2 flex justify-center">
               <button
-                className={`w-40 btn btn-square bg-gradient-to-r from-[#0177e1] to-[#004cf7] border-none hover:from-[#004cf7]  hover:to-[#085da9] dark:text-white${
-                  loading ? "loading" : ""
-                }`}
+                className={`w-40 btn btn-square bg-gradient-to-r from-[#e83864] to-[#3b1d17] border-none hover:from-[#3b1d17]  hover:to-[#a8072f] dark:text-white${loading ? "loading" : ""
+                  }`}
                 onClick={fetchMorePosts}
               >
                 {loading ? "" : "Show More"}
@@ -416,7 +410,7 @@ const QueryExplain = () => {
       {showExplanation && (
         <div className="relative">
           <button
-            className="absolute right-5 bottom-5 bg-gradient-to-r from-[#0177e1] to-[#004cf7] border-none hover:from-[#004cf7]  hover:to-[#085da9] p-3 rounded-full text-white font-bold text-[20px]"
+            className="absolute right-5 bottom-5 bg-gradient-to-r from-[#e83864] to-[#3b1d17] border-none hover:from-[#3b1d17]  hover:to-[#a8072f] p-3 rounded-full text-white font-bold text-[20px]"
             type="button"
             onClick={() => scrollToTop()}
           >

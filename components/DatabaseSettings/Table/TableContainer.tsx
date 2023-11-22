@@ -14,7 +14,7 @@ type Props = {
 }
 
 const TableContainer: FC<Props> = ({ page, setPage, isMore, newTable }) => {
-  
+
   const dispatch = useDispatch()
   const { current, tables } = useSelector((state: RootState) => state.persistedReducer.userDatabases);
 
@@ -32,12 +32,12 @@ const TableContainer: FC<Props> = ({ page, setPage, isMore, newTable }) => {
 
   return (
     <>
-      
+
 
       {tables?.length === 0 ? (
         <div className="w-full h-40  mt-4 rounded-lg flex flex-col items-center justify-center gap-4">
           <p>No tables defined yet!</p>
-          <button className="uppercase w-[160px] btn btn-square  bg-gradient-to-r from-[#0177e1] to-[#004cf7] border-none hover:from-[#004cf7]  hover:to-[#085da9] dark:text-white" onClick={handleCreateTable}>
+          <button className="uppercase w-[160px] btn btn-square  bg-gradient-to-r from-[#e83864] to-[#3b1d17] border-none hover:from-[#3b1d17]  hover:to-[#a8072f] dark:text-white" onClick={handleCreateTable}>
             Create first table
           </button>
         </div>

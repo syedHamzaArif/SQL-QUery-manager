@@ -90,17 +90,15 @@ const NewSettingPage = ({ isActive }: IProps) => {
             <div className="tabs tabs-boxed bg-[#E8F2FF] dark:bg-[#2D2D2D] h-[70px] xl:w-[33%] w-[50%] justify-center rounded-lg items-center dark:border dark:border-[#E8F2FF] ">
               <p
                 onClick={() => setTabs("Profile")}
-                className={`tab ${
-                  tabs == "Profile" && "activeTab"
-                } font-[400] text-[18px] rounded-lg w-[30%] h-[50px] font dark:text-white`}
+                className={`tab ${tabs == "Profile" && "activeTab"
+                  } font-[400] text-[18px] rounded-lg w-[30%] h-[50px] font dark:text-white`}
               >
                 Profile
               </p>
               <p
                 onClick={() => setTabs("Subscription")}
-                className={`tab ${
-                  tabs == "Subscription" && "activeTab"
-                }  font-[400] text-[18px] rounded-lg xl:w-[63%] w-[68%] h-[50px] dark:text-white`}
+                className={`tab ${tabs == "Subscription" && "activeTab"
+                  }  font-[400] text-[18px] rounded-lg xl:w-[63%] w-[68%] h-[50px] dark:text-white`}
               >
                 Subscription Plan
               </p>
@@ -126,7 +124,7 @@ const NewSettingPage = ({ isActive }: IProps) => {
                       Email
                     </p>
                     <input
-                      className=" bg-white p-3 rounded-xl border border-[#004CF7] text-[#2D2D2D] dark:bg-[#2D2D2D] dark:text-[#E2E2E2] dark:border-white w-full h-10"
+                      className=" bg-white p-3 rounded-xl border border-[#3b1d17] text-[#2D2D2D] dark:bg-[#2D2D2D] dark:text-[#E2E2E2] dark:border-white w-full h-10"
                       placeholder="john@example.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
@@ -138,7 +136,7 @@ const NewSettingPage = ({ isActive }: IProps) => {
                       Confirm Email
                     </p>
                     <input
-                      className=" bg-white p-3 rounded-xl border border-[#004CF7] text-[#2D2D2D] dark:bg-[#2D2D2D] dark:text-[#E2E2E2] dark:border-white w-full h-10"
+                      className=" bg-white p-3 rounded-xl border border-[#3b1d17] text-[#2D2D2D] dark:bg-[#2D2D2D] dark:text-[#E2E2E2] dark:border-white w-full h-10"
                       placeholder="john@example.com"
                       value={confirmEmail}
                       onChange={(e) => setConfirmEmail(e.target.value)}
@@ -149,13 +147,13 @@ const NewSettingPage = ({ isActive }: IProps) => {
                 <div className="mt-5">
                   <button
                     onClick={() => setOpenModal(false)}
-                    className="text-[15px] tracking-wide rounded-lg px-4 pt-3 pb-3 border border-[#004CF7] dark:border-white dark:text-white mr-3 font-normal hover:bg-red-700 hover:text-white hover:border-red-700 uppercase"
+                    className="text-[15px] tracking-wide rounded-lg px-4 pt-3 pb-3 border border-[#3b1d17] dark:border-white dark:text-white mr-3 font-normal hover:bg-red-700 hover:text-white hover:border-red-700 uppercase"
                   >
                     Cancel
                   </button>
                   <button
                     onClick={handleDeleteAccount}
-                    className="uppercase w-[160px] h-[40px] ml-2 btn btn-square bg-gradient-to-r from-[#0177e1] to-[#004cf7] border-none hover:from-[#004cf7]  hover:to-[#085da9] dark:text-white"
+                    className="uppercase w-[160px] h-[40px] ml-2 btn btn-square bg-gradient-to-r from-[#e83864] to-[#3b1d17] border-none hover:from-[#3b1d17]  hover:to-[#a8072f] dark:text-white"
                   >
                     Delete Account
                   </button>

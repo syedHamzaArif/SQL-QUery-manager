@@ -131,7 +131,7 @@ const AddNewDatabase: FC<DBProp> = ({ name, setName, type, setType }) => {
         SuccessToast("Database deleted");
 
         dispatch(deleteDB(res?.data?.dbId as string));
-        
+
 
         return true;
       }
@@ -259,7 +259,7 @@ const AddNewDatabase: FC<DBProp> = ({ name, setName, type, setType }) => {
               <input
                 type="text"
                 placeholder="Enter Name"
-                className="input focus:outline-none bg-white dark:bg-[#2D2D2D] border-[#0177E1] dark:border-white placeholder:font-normal"
+                className="input focus:outline-none bg-white dark:bg-[#2D2D2D] border-[#e83864] dark:border-white placeholder:font-normal"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 autoFocus
@@ -268,7 +268,7 @@ const AddNewDatabase: FC<DBProp> = ({ name, setName, type, setType }) => {
             </div>
             <div className="form-control w-[100%]">
               <select
-                className="select focus:outline-none bg-white dark:bg-[#2D2D2D] border-[#0177E1] dark:border-white"
+                className="select focus:outline-none bg-white dark:bg-[#2D2D2D] border-[#e83864] dark:border-white"
                 value={type}
                 onChange={(e) => setType(e.target.value as DB["type"])}
               >
@@ -282,21 +282,19 @@ const AddNewDatabase: FC<DBProp> = ({ name, setName, type, setType }) => {
 
           <div className="flex justify-start mt-4">
             <button
-              className={` uppercase py-3 rounded-xl bg-[#E8F2FF]  px-4 border-none mr-3 text-[15px] tracking-wide ${
-                !showTables
-                  ? "!bg-[#0177E1] dark:bg-white text-white "
-                  : "border-[#5b6065] dark:border-white dark:text-black"
-              }`}
+              className={` uppercase py-3 rounded-xl bg-[#E8F2FF]  px-4 border-none mr-3 text-[15px] tracking-wide ${!showTables
+                ? "!bg-[#e83864] dark:bg-white text-white "
+                : "border-[#5b6065] dark:border-white dark:text-black"
+                }`}
               onClick={() => setShowTables(false)}
             >
               Import From Script
             </button>
             <button
-              className={`uppercase py-3 rounded-xl  bg-[#E8F2FF]  px-4 border-none mr-3 text-[15px] tracking-wide ${
-                showTables
-                  ? "!bg-[#0177E1] dark:bg-white text-white"
-                  : "border-[#5b6065] dark:border-white dark:text-black"
-              }`}
+              className={`uppercase py-3 rounded-xl  bg-[#E8F2FF]  px-4 border-none mr-3 text-[15px] tracking-wide ${showTables
+                ? "!bg-[#e83864] dark:bg-white text-white"
+                : "border-[#5b6065] dark:border-white dark:text-black"
+                }`}
               onClick={() => setShowTables(true)}
             >
               Create Tables
@@ -307,19 +305,19 @@ const AddNewDatabase: FC<DBProp> = ({ name, setName, type, setType }) => {
         {!showTables ? (
           <>
             <div className="w-[40%] mt-2">
-              <span className="text-[#0177E1] text-lg">NOTE: Only the first 100 tables will be imported</span>
+              <span className="text-[#e83864] text-lg">NOTE: Only the first 100 tables will be imported</span>
               <div className="w-auto">
                 <textarea
                   placeholder="Paste Your SQL Here.....!"
                   required
                   value={script}
                   onChange={(e) => setScript(e.target.value)}
-                  className="mt-4 w-full min-h-[15rem]  border bg-white p-4 rounded-xl border-[#004CF7] text-[#7E7E7E] dark:bg-[#2D2D2D] dark:text-[#E2E2E2] dark:border-white focus:outline-none"
+                  className="mt-4 w-full min-h-[15rem]  border bg-white p-4 rounded-xl border-[#3b1d17] text-[#7E7E7E] dark:bg-[#2D2D2D] dark:text-[#E2E2E2] dark:border-white focus:outline-none"
                 />
               </div>
               <div className="flex items-center mt-2">
                 <button
-                  className="w-[80px] btn btn-square  bg-gradient-to-r from-[#0177e1] to-[#004cf7] border-none hover:from-[#004cf7]  hover:to-[#085da9] dark:text-white"
+                  className="w-[80px] btn btn-square  bg-gradient-to-r from-[#e83864] to-[#3b1d17] border-none hover:from-[#3b1d17]  hover:to-[#a8072f] dark:text-white"
                   onClick={handleImportFromScript}
                 >
                   Import
@@ -353,14 +351,14 @@ const AddNewDatabase: FC<DBProp> = ({ name, setName, type, setType }) => {
         {/* save button div */}
         <div className="mt-10">
           <button
-            className="uppercase text-[15px] tracking-wide rounded-lg px-4 py-2 border border-[#004CF7] dark:border-white dark:text-white mr-3 font-normal hover:bg-red-700 hover:text-white hover:border-red-700"
-            onClick={()=>router.push("/dashboard/databases")}
+            className="uppercase text-[15px] tracking-wide rounded-lg px-4 py-2 border border-[#3b1d17] dark:border-white dark:text-white mr-3 font-normal hover:bg-red-700 hover:text-white hover:border-red-700"
+            onClick={() => router.push("/dashboard/databases")}
           >
             Cancel
           </button>
           <button
             type="submit"
-            className="uppercase w-[80px] btn btn-square  bg-gradient-to-r from-[#0177e1] to-[#004cf7] border-none hover:from-[#004cf7]  hover:to-[#085da9] dark:text-white"
+            className="uppercase w-[80px] btn btn-square  bg-gradient-to-r from-[#e83864] to-[#3b1d17] border-none hover:from-[#3b1d17]  hover:to-[#a8072f] dark:text-white"
             onClick={() => createDatabase()}
           >
             Save

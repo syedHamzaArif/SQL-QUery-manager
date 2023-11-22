@@ -29,15 +29,13 @@ const PlanCard = ({ data }: IProps) => {
     "Unlimited Database Schema",
     "Unlimited Save and Share SQL Queries",
     "Unlimited SQL Query History",
-    `${
-      planType == "Pro Yearly"
-        ? "Faster AI Response Speed"
-        : "Standard AI Response Speed"
+    `${planType == "Pro Yearly"
+      ? "Faster AI Response Speed"
+      : "Standard AI Response Speed"
     }`,
-    `${
-      planType == "Pro Yearly"
-        ? "Priority Access to New Features"
-        : "Standard Access to New Features"
+    `${planType == "Pro Yearly"
+      ? "Priority Access to New Features"
+      : "Standard Access to New Features"
     }`,
     `${planType == "Pro Yearly" ? "Priority Support" : "Regular Support"}`,
     "Cancel Anytime",
@@ -46,8 +44,8 @@ const PlanCard = ({ data }: IProps) => {
   return (
     <>
       <div className="my-5">
-        <div className=" bg-white dark:bg-[#2D2D2D] w-[393px] h-[616px] border border-[#004CF7] dark:border-white flex flex-col items-center rounded-lg">
-          <div className="w-[140px] h-8 bg-gradient-to-r from-[#0177e1] to-[#004cf7]  rounded-2xl flex items-center justify-center mt-8">
+        <div className=" bg-white dark:bg-[#2D2D2D] w-[393px] h-[616px] border border-[#3b1d17] dark:border-white flex flex-col items-center rounded-lg">
+          <div className="w-[140px] h-8 bg-gradient-to-r from-[#e83864] to-[#3b1d17]  rounded-2xl flex items-center justify-center mt-8">
             <p className="text-white text-[16px] font-[600] text-center">
               Current Plan
             </p>
@@ -76,7 +74,7 @@ const PlanCard = ({ data }: IProps) => {
               </div>
             ))}
           </div>
-          <button className="bg-gradient-to-r from-[#0177e1] to-[#004cf7] uppercase text-white w-[77%] h-12 rounded-md mt-5">
+          <button className="bg-gradient-to-r from-[#e83864] to-[#3b1d17] uppercase text-white w-[77%] h-12 rounded-md mt-5">
             Change plan
           </button>
         </div>
