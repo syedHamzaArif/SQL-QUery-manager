@@ -5,7 +5,6 @@ import * as React from "react";
 import { useSelector } from "react-redux";
 import { Url } from "url";
 import { RootState } from "../redux/store";
-import getStripe from "../stripe/getStripe";
 import { ErrorToast } from "./Toasts";
 
 interface IPlanCardProps {
@@ -51,20 +50,19 @@ const PlanCard: React.FunctionComponent<IPlanCardProps> = ({
   const redirectToCheckout = async (price: string) => {
     try {
       // Create Stripe checkout
-      const {
-        data: { id },
-      } = await axios.post("/api/checkout_sessions", {
-        price,
-        uid: user?.sub,
-        email: user?.email,
-        customer: stripeCustomerId,
-      });
+      // const {
+      //   data: { id },
+      // } = await axios.post("/api/checkout_sessions", {
+      //   price,
+      //   uid: user?.sub,
+      //   email: user?.email,
+      //   customer: stripeCustomerId,
+      // });
 
       // Redirect to checkout
-      const stripe = await getStripe();
-      await stripe.redirectToCheckout({ sessionId: id });
+
     } catch (error) {
-      ErrorToast("An error occurred while redirecting to checkout");
+      // ErrorToast("An error occurred while redirecting to checkout");
     }
   };
 

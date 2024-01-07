@@ -95,13 +95,13 @@ const NewSettingPage = ({ isActive }: IProps) => {
               >
                 Profile
               </p>
-              <p
+              {/* <p
                 onClick={() => setTabs("Subscription")}
                 className={`tab ${tabs == "Subscription" && "activeTab"
                   }  font-[400] text-[18px] rounded-lg xl:w-[63%] w-[68%] h-[50px] dark:text-white`}
               >
                 Subscription Plan
-              </p>
+              </p> */}
             </div>
             {tabs == "Profile" && (
               <button

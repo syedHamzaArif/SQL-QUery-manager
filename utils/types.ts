@@ -46,7 +46,7 @@ export const queryTypes: QueryType[] = [
   // { label: "Delete Query", value: "delete" },
   // { label: "Select Query", value: "select" },
   { label: "Optimize Query", value: "optimize" },
-  { label: "Suggest Indexes", value: "index" },
+  // { label: "Suggest Indexes", value: "index" },
 ];
 
 export const possibleIntents = ['create', 'update', 'delete', 'select', 'explain', 'optimize', 'index'];

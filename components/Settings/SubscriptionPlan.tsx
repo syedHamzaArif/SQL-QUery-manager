@@ -39,9 +39,9 @@ const SubscriptionPlan = ({ isActive }: IProps) => {
 
   return (
     <div>
-      <p className="text-[#2D2D2D] text-[25px] font-[500] dark:text-white">
+      {/* <p className="text-[#2D2D2D] text-[25px] font-[500] dark:text-white">
         Subscription Plan
-      </p>
+      </p> */}
       <div className="border-t border-t-[#3b1d17] dark:border-t-white  mt-2"></div>
       {isActive ? (
         <div>

@@ -21,24 +21,20 @@ const generatePrompt = (
 ) => {
   switch (intent) {
     case "explain":
-      return `${
-        tablePrompt ? tablePrompt + "\n" : ""
-      }Query: ${query}\nTask: Explain the above query in human readable format in English step by step in numbered points.\n`;
+      return `${tablePrompt ? tablePrompt + "\n" : ""
+        }Query: ${query}\nTask: Explain the above query in human readable format in English step by step in numbered points.\n`;
     case "optimize":
-      return `${
-        tablePrompt ? tablePrompt + "\n" : ""
-      }Query: ${query}\nTask: Optimize the above query to run faster. Return only SQL code.\n`;
+      return `${tablePrompt ? tablePrompt + "\n" : ""
+        }Query: ${query}\nTask: Optimize the above query to run faster. Return only SQL code.\n`;
     case "index":
-      return `${
-        tablePrompt ? tablePrompt + "\n" : ""
-      }Query: ${query}\nTask: Generate the indexes based on above query. Return only SQL code.\n`;
+      return `${tablePrompt ? tablePrompt + "\n" : ""
+        }Query: ${query}\nTask: Generate the indexes based on above query. Return only SQL code.\n`;
     case "create":
     case "update":
     case "delete":
     case "select":
-      return `${
-        tablePrompt ? tablePrompt + "\n" : ""
-      }Query: ${query}\nTask: Generate a SQL query based on above prompt and SQL table schema\n`;
+      return `${tablePrompt ? tablePrompt + "\n" : ""
+        }Query: ${query}\nTask: Generate a SQL query based on above prompt and SQL table schema\n`;
     // case "create":
     //   return `${
     //     tablePrompt ? tablePrompt + "\n" : ""
@@ -56,9 +52,8 @@ const generatePrompt = (
     //     tablePrompt ? tablePrompt + "\n" : ""
     //   }Query: ${query}\nTask: Generate a SELECT query based on above prompt\n`;
     default:
-      return `${
-        tablePrompt ? tablePrompt + "\n" : ""
-      }Query: ${query}\nTask: Explain the above query in human readable format in English step by step\n`;
+      return `${tablePrompt ? tablePrompt + "\n" : ""
+        }Query: ${query}\nTask: Explain the above query in human readable format in English step by step\n`;
   }
 };
 
@@ -131,8 +126,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const data = await openai.createCompletion({
       model: "text-davinci-003",
-      // prompt: generatePrompt(query, intent, tablePrompt),
-      prompt,
+      prompt: generatePrompt(query, intent, tablePrompt),
+      // prompt,
       temperature: 0,
       max_tokens: remainingTokens,
       top_p: 1,
@@ -144,6 +139,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const docId = uuidv4();
     const docRef = generateDocRef(id, docId, intent);
     const response = data.data.choices[0].text;
+    console.log('file: index.ts:141 => handler => response:', response);
     const now = new Date();
     const docData = JSON.stringify({
       prompt: query,

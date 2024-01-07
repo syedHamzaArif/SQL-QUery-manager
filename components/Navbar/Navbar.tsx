@@ -47,16 +47,6 @@ const Navbar = ({
                   <a>Features</a>
                 </li>
                 <li
-                  tabIndex={0}
-                  onClick={() =>
-                    router.pathname === ""
-                      ? handelScrollToPricing()
-                      : handleRouteToHome("pricing")
-                  }
-                >
-                  <a>Pricing</a>
-                </li>
-                <li
                   onClick={() =>
                     router.pathname === ""
                       ? handelScrollToContact()
@@ -129,15 +119,6 @@ const Navbar = ({
                 }
               >
                 <a>Features</a>
-              </li>
-              <li
-                onClick={() =>
-                  router.pathname === ""
-                    ? handelScrollToPricing()
-                    : handleRouteToHome("pricing")
-                }
-              >
-                <a>Pricing</a>
               </li>
               <li
                 onClick={() =>

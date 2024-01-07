@@ -30,12 +30,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   const [width, height] = useDimension();
 
-  useEffect(() => {
-    if (process.env.NODE_ENV === "production") {
-      getAnalytics(app);
-    }
-  }, []);
-
   return (
     <UserProvider>
       <Provider store={store}>

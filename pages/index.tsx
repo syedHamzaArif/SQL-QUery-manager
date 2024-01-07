@@ -28,10 +28,6 @@ const Home: NextPage = () => {
         featuresRef.current.scrollIntoView({ behavior: "smooth" });
       }
 
-      if (anchor === "pricing") {
-        // @ts-ignore
-        pricingRef.current.scrollIntoView({ behavior: "smooth" });
-      }
 
       if (anchor === "contact") {
         // @ts-ignore

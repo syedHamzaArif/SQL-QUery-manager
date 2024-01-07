@@ -36,16 +36,7 @@ const Footer = ({
         >
           Features
         </a>
-        <a
-          className="link link-hover"
-          onClick={() =>
-            router.pathname === ""
-              ? handelScrollToPricing()
-              : handleRouteToHome("pricing")
-          }
-        >
-          Pricing
-        </a>
+
         <a
           className="link link-hover"
           onClick={() =>
