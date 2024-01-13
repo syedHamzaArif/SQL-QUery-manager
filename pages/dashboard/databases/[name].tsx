@@ -66,16 +66,7 @@ export const getServerSideProps = async ({
       },
     };
   const id = session?.user.sub;
-  const isActive = await verifySubscription(id);
-  if (!isActive)
-    return {
-      props: {
-        isActive,
-      },
-    };
-
   const name = params?.name;
-  
 
   const databaseRef = collection(db, "users", id, "database");
   const q = firestoreQuery(databaseRef, where("name", "==", name));
@@ -96,7 +87,7 @@ export const getServerSideProps = async ({
       props: {
         database: { ...databases.docs[0].data(), id: databaseId },
         tables,
-        isActive,
+        isActive: true,
         edit: query.edit ? query.edit : null,
         id,
         name,
@@ -105,7 +96,7 @@ export const getServerSideProps = async ({
   } catch (error) {
     console.log(error);
     return {
-      props: { isActive },
+      props: { isActive: true },
     };
   }
 };
