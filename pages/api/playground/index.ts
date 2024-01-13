@@ -125,7 +125,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   }
   try {
     const data = await openai.createCompletion({
-      model: "text-davinci-003",
+      model: "gpt-3.5-turbo-instruct",
       prompt: generatePrompt(query, intent, tablePrompt),
       // prompt,
       temperature: 0,

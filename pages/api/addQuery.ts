@@ -51,7 +51,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     openai
       .createCompletion({
-        model: "text-davinci-003",
+        model: "gpt-3.5-turbo-instruct",
         prompt: generatePrompt(query.prompt, query.operation, queryDb),
         temperature: 0,
         max_tokens: 256,

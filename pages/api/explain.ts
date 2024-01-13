@@ -26,7 +26,7 @@ export default async function handler(
     if ( !code ) return res.status(400).json({ message: "Please provide code in request body" })
 
     const data = await openai.createCompletion({
-      model: "text-davinci-003",
+      model: "gpt-3.5-turbo-instruct",
       prompt: generatePrompt(code),
       temperature: 0,
       max_tokens: 256,
