@@ -94,12 +94,12 @@ const Navbar = ({
             {/* <img
               className="rounded-xl hidden sm:w-12 sm:block"
               src={"/ai-query.png"}
-              alt={"AI Query Logo"}
+              alt={"SQL Query Logo"}
             />{" "} */}
             <Image
               className="rounded-xl hidden sm:w-12 sm:block"
               src={aiquerylogo}
-              alt="ai query logo"
+              alt="SQL Query Manage"
               width="40px"
               height="40px"
             />{" "}

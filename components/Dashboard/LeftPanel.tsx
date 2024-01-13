@@ -83,13 +83,13 @@ const LeftPanel = ({ user, tab, setTab }: Props) => {
         <AiOutlineConsoleSql className="text-[21px] dark:text-white" />
       ),
     },
-    // {
-    //   name: "Databases",
-    //   toolTipName: "Databases",
-    //   activePath: "/dashboard/databases",
-    //   onClick: () => router.push("/dashboard/databases"),
-    //   icon: () => <AiOutlineDatabase className="text-[21px] dark:text-white" />,
-    // },
+    {
+      name: "Databases",
+      toolTipName: "Databases",
+      activePath: "/dashboard/databases",
+      onClick: () => router.push("/dashboard/databases"),
+      icon: () => <AiOutlineDatabase className="text-[21px] dark:text-white" />,
+    },
   ];
 
   const bottomNavBar = [
