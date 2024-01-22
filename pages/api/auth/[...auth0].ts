@@ -13,9 +13,10 @@ export default handleAuth({
   async logout(req, res) {
     try {
       await handleLogout(req, res, {
-        returnTo: `${process.env.AUTH0_BASE_URL_LOGOUT}`,
+        returnTo: 'http://localhost:3000/dashboard',
       });
     } catch (error: any) {
+      console.log('err', error)
       res.status(error.status || 400).end(error.message);
     }
   },
