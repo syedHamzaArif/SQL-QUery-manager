@@ -83,23 +83,6 @@ const HOC: FC<any> = ({ children }: any) => {
 
   return (
     <>
-      <NextSeo
-        title="Dashboard | SQL Query Manager"
-        description="SQL Query Manager helps you generate complex SQL queries in seconds. Use simple English prompts to generate SQL queries. SQL Query uses state of the art GPT-3 AI model to give you the best results."
-        canonical="https://aiquery.co"
-        openGraph={{
-          url: "https://aiquery.co",
-          title: "Dashboard | SQL Query Manager",
-          description:
-            "SQL Query helps you generate complex SQL queries in seconds. Use simple English prompts to generate SQL queries. SQL Query uses state of the art GPT-3 AI model to give you the best results.",
-          images: [{ url: "https://aiquery.co/dashboard-hero.png" }],
-          siteName: "SQL Query Manager",
-        }}
-        twitter={{
-          handle: "@HelloAIQuery",
-          cardType: "summary_large_image",
-        }}
-      />
       <main className="m-auto bg-[#F6F6F6] text-[#3b1d17]  dark:bg-[#1c1c1c] dark:text-[#FFFFFF]">
         {/* <main className="m-auto bg-[#CFCFCF]"> */}
 

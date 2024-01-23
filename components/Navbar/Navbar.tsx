@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useDimension } from "../../hooks/useDimension";
-import aiquerylogo from "../../public/ai-query.png";
+import sqlquerylogo from "../../public/ai-query.png";
 type Props = {
   handelScrollToContact?: () => void;
   handelScrollToFeatures?: () => void;
@@ -60,13 +60,6 @@ const Navbar = ({
                     <a>SQL to English</a>
                   </Link>
                 </li>
-                <li>
-                  <Link href="https://docs.aiquery.co">
-                    <a target="_blank" rel="noreferrer">
-                      Docs
-                    </a>
-                  </Link>
-                </li>
               </>
             )}
             {user && (
@@ -98,7 +91,7 @@ const Navbar = ({
             />{" "} */}
             <Image
               className="rounded-xl hidden sm:w-12 sm:block"
-              src={aiquerylogo}
+              src={sqlquerylogo}
               alt="SQL Query Manage"
               width="40px"
               height="40px"
@@ -132,13 +125,6 @@ const Navbar = ({
               <li>
                 <Link href="/sql-to-english-translator">
                   <a>SQL to English</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="https://docs.aiquery.co">
-                  <a target="_blank" rel="noreferrer">
-                    Docs
-                  </a>
                 </Link>
               </li>
             </>

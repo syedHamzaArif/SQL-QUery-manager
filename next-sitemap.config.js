@@ -1,3 +1,3 @@
 module.exports = {
-  siteUrl: "https://aiquery.co",
+  siteUrl: "https://sqlquery.co",
 };

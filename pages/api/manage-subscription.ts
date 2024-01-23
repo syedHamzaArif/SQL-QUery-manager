@@ -72,9 +72,7 @@ export default async function handler(
         },
       },
       business_profile: {
-        headline: "SQL Query Manager",
-        privacy_policy_url: "https://aiquery.co/privacy-policy",
-        terms_of_service_url: "https://aiquery.co/terms-of-use",
+        headline: "SQL Query Manager"
       },
     });
 
